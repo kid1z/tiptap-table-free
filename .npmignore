@@ -1,0 +1,49 @@
+# Development files
+.next
+node_modules
+.git
+.gitignore
+
+# Test files
+test-output
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build files (keep src, exclude built Next.js app)
+.next/
+out/
+build/
+dist/
+
+# Config files not needed in package
+next.config.ts
+next-env.d.ts
+tsconfig.json
+eslint.config.mjs
+
+# Public assets (not needed for the CLI package)
+public/
+
+# App-specific files (users will create their own)
+src/app/
