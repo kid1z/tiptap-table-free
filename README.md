@@ -1,4 +1,5 @@
 # Tiptap Table Free
+https://github.com/user-attachments/assets/712cc287-5340-4eb1-b0b3-41d5e694d2a9
 
 @tiptap/cli not suported table extension for free? No worries! This is for you, built with Next.js and TypeScript. This project provides a comprehensive set of components and utilities to easily integrate table functionality into your Tiptap editor.
 
