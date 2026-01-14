@@ -1,6 +1,6 @@
 {
   "name": "tiptap-table-free",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A free CLI tool to add advanced table support to your Tiptap editor with beautiful UI components",
   "keywords": [
     "tiptap",
@@ -15,12 +15,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/tiptap-table-free.git"
+    "url": "https://github.com/kid1z/tiptap-table-free.git"
   },
   "author": "Your Name",
-  "homepage": "https://github.com/yourusername/tiptap-table-free#readme",
+  "homepage": "https://github.com/kid1z/tiptap-table-free#readme",
   "bugs": {
-    "url": "https://github.com/yourusername/tiptap-table-free/issues"
+    "url": "https://github.com/kid1z/tiptap-table-free/issues"
   },
   "bin": {
     "tiptap-table-free": "./bin/index.js"
