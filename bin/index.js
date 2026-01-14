@@ -15,7 +15,7 @@ const colors = {
 
 // File templates
 const fileTemplates = {
-  'components/tiptap-icons/table-icon.tsx': `import { memo } from 'react'
+  'src/components/tiptap-icons/table-icon.tsx': `import { memo } from 'react'
 
 type SvgProps = React.ComponentPropsWithoutRef<'svg'>
 
@@ -367,7 +367,7 @@ export const ToggleHeaderCellIcon = memo(
 ToggleHeaderCellIcon.displayName = 'ToggleHeaderCellIcon'
 `,
 
-  'components/tiptap-icons/chevron-down-icon.tsx': `import { memo } from 'react'
+  'src/components/tiptap-icons/chevron-down-icon.tsx': `import { memo } from 'react'
 
 type SvgProps = React.ComponentPropsWithoutRef<'svg'>
 
@@ -393,7 +393,7 @@ export const ChevronDownIcon = memo(({ className, ...props }: SvgProps) => (
 ChevronDownIcon.displayName = 'ChevronDownIcon'
 `,
 
-  'components/tiptap-node/table-node.scss': `/* Basic editor styles */
+  'src/components/tiptap-node/table-node.scss': `/* Basic editor styles */
 .tiptap {
   :first-child {
     margin-top: 0;
@@ -462,16 +462,16 @@ ChevronDownIcon.displayName = 'ChevronDownIcon'
 }
 `,
 
-  'components/tiptap-ui/table-button/index.tsx': `// biome-ignore lint/performance/noBarrelFile: <na>
+  'src/components/tiptap-ui/table-button/index.tsx': `// biome-ignore lint/performance/noBarrelFile: <na>
 export * from './table-button'
 export * from './use-table'
 `,
 
-  'components/tiptap-ui/table-button/table-button.tsx': `import { type RefObject, useCallback } from 'react'
+  'src/components/tiptap-ui/table-button/table-button.tsx': `import { type RefObject, useCallback } from 'react'
 import {
   Button,
   type ButtonProps,
-} from '@/components/tiptap-ui-primitive/button'
+} from '@/src/components/tiptap-ui-primitive/button'
 import { useTiptapEditor } from '@/hooks/use-tiptap-editor'
 import type { TableList } from '../table-dropdown-menu/use-table-dropdown-menu'
 import { type UseTableConfig, useTable } from './use-table'
@@ -568,7 +568,7 @@ export const TableButton = ({
 TableButton.displayName = 'TableButton'
 `,
 
-  'components/tiptap-ui/table-button/use-table.ts': `import type { Editor } from '@tiptap/react'
+  'src/components/tiptap-ui/table-button/use-table.ts': `import type { Editor } from '@tiptap/react'
 import { useCallback, useEffect, useState } from 'react'
 import {
   AddColumnAfterIcon,
@@ -585,7 +585,7 @@ import {
   ToggleHeaderCellIcon,
   ToggleHeaderColumnIcon,
   ToggleHeaderRowIcon,
-} from '@/components/tiptap-icons/table-icon'
+} from '@/src/components/tiptap-icons/table-icon'
 import { useTiptapEditor } from '@/hooks/use-tiptap-editor'
 import {
   shouldShowButton,
@@ -718,26 +718,26 @@ export function useTable(config: UseTableConfig) {
 }
 `,
 
-  'components/tiptap-ui/table-dropdown-menu/index.tsx': `// biome-ignore lint/performance/noBarrelFile: <na>
+  'src/components/tiptap-ui/table-dropdown-menu/index.tsx': `// biome-ignore lint/performance/noBarrelFile: <na>
 export * from './table-dropdown-menu'
 `,
 
-  'components/tiptap-ui/table-dropdown-menu/table-dropdown-menu.tsx': `import { useCallback, useState } from 'react'
-import { ChevronDownIcon } from '@/components/tiptap-icons/chevron-down-icon'
-import { TableIcon } from '@/components/tiptap-icons/table-icon'
-import { Badge } from '@/components/tiptap-ui-primitive/badge'
+  'src/components/tiptap-ui/table-dropdown-menu/table-dropdown-menu.tsx': `import { useCallback, useState } from 'react'
+import { ChevronDownIcon } from '@/src/components/tiptap-icons/chevron-down-icon'
+import { TableIcon } from '@/src/components/tiptap-icons/table-icon'
+import { Badge } from '@/src/components/tiptap-ui-primitive/badge'
 import {
   Button,
   ButtonGroup,
   type ButtonProps,
-} from '@/components/tiptap-ui-primitive/button'
-import { Card, CardBody } from '@/components/tiptap-ui-primitive/card'
+} from '@/src/components/tiptap-ui-primitive/button'
+import { Card, CardBody } from '@/src/components/tiptap-ui-primitive/card'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/tiptap-ui-primitive/dropdown-menu'
+} from '@/src/components/tiptap-ui-primitive/dropdown-menu'
 import { useTiptapEditor } from '@/hooks/use-tiptap-editor'
 import { parseShortcutKeys } from '@/lib/tiptap-utils'
 import { TableButton } from '../table-button'
@@ -847,7 +847,7 @@ export const TableDropdownList = ({
 TableDropdownList.displayName = 'TableDropdownList'
 `,
 
-  'components/tiptap-ui/table-dropdown-menu/use-table-dropdown-menu.ts': `import type { Editor } from '@tiptap/react'
+  'src/components/tiptap-ui/table-dropdown-menu/use-table-dropdown-menu.ts': `import type { Editor } from '@tiptap/react'
 import { useEffect, useState } from 'react'
 import {
   AddColumnAfterIcon,
@@ -861,7 +861,7 @@ import {
   MergeCellsIcon,
   SplitCellIcon,
   TableIcon,
-} from '@/components/tiptap-icons/table-icon'
+} from '@/src/components/tiptap-icons/table-icon'
 import { useTiptapEditor } from '@/hooks/use-tiptap-editor'
 import { isNodeInSchema } from '@/lib/tiptap-utils'
 
@@ -1057,7 +1057,7 @@ ${colors.reset}`);
   for (const [filePath, content] of Object.entries(fileTemplates)) {
     try {
       const fullPath = path.join(process.cwd(), filePath);
-      
+
       // Check if file already exists
       if (fs.existsSync(fullPath)) {
         console.log(`${colors.yellow}⚠  Skipping (already exists): ${filePath}${colors.reset}`);
@@ -1086,8 +1086,8 @@ ${colors.reset}`);
   console.log(`${colors.bright}${colors.cyan}═══════════════════════════════════════════════════${colors.reset}\n`);
 
   console.log(`${colors.blue}Next steps:${colors.reset}`);
-  console.log(`  1. Make sure you have installed the required Tiptap UI primitives:`);
-  console.log(`     ${colors.cyan}npx tiptap-ui add badge button card dropdown-menu tooltip${colors.reset}`);
+  console.log(`  1. Make sure you have installed the required Tiptap CLI:`);
+  console.log(`     ${colors.cyan}npx @tiptap/cli@latest init${colors.reset}`);
   console.log(`  2. Import and use the TableDropdownList component in your editor`);
   console.log(`  3. Import the table-node.scss styles in your component\n`);
 
