@@ -1,25 +1,16 @@
 # Tiptap Table Free
 
-A free, open-source rich text editor with advanced table support built with [Tiptap](https://tiptap.dev/) and [Next.js](https://nextjs.org). This project provides a modern, customizable editor with comprehensive table manipulation features.
-
-## ✨ Features
-
-- 🎨 **Modern UI Components** - Beautiful, accessible UI primitives built with Radix UI
-- 📊 **Advanced Table Support** - Full-featured table editing with:
-  - Insert/delete tables, rows, and columns
-  - Merge and split cells
-  - Resizable columns
-  - Header row/column/cell toggles
-  - Cell selection and manipulation
-- 🎯 **Rich Text Editing** - Powered by Tiptap with StarterKit extensions
-- 🌗 **Dark Mode Ready** - Complete dark mode support with CSS variables
-- ⌨️ **Keyboard Shortcuts** - Efficient editing with keyboard shortcuts
-- 🎭 **Customizable Styling** - Comprehensive SCSS variables for theming
-- ♿ **Accessible** - Built with accessibility in mind using Radix UI primitives
+@tiptap/cli not suported table extension for free? No worries! This is a free table plugin for Tiptap, built with Next.js and TypeScript. This project provides a comprehensive set of components and utilities to easily integrate table functionality into your Tiptap editor.
 
 ## 🚀 Quick Start
 
-### Using the CLI (Recommended)
+### Using the CLI
+
+First install the Tiptap CLI (https://tiptap.dev/docs/ui-components/getting-started/cli) and dependencies (StarterKit, @tiptap/react, etc...) if you haven't already:
+
+```bash
+npx @tiptap/cli@latest init
+```
 
 The easiest way to add table support to your Tiptap editor is using our CLI:
 
@@ -33,11 +24,6 @@ This will generate all necessary components in your project:
 - `components/tiptap-ui/table-button/` - Table button components
 - `components/tiptap-ui/table-dropdown-menu/` - Table dropdown menu
 
-After running the CLI, install the required UI primitives:
-
-```bash
-npx tiptap-ui add badge button card dropdown-menu tooltip
-```
 
 ### Manual Installation
 
@@ -45,7 +31,7 @@ If you prefer to clone the entire project:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/tiptap-table-free.git
+git clone https://github.com/kid1z/tiptap-table-free.git
 cd tiptap-table-free
 ```
 
