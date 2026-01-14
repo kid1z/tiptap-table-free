@@ -47,3 +47,6 @@ public/
 
 # App-specific files (users will create their own)
 src/app/
+
+# Source folder (exclude from npm package)
+src/

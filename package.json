@@ -1,6 +1,6 @@
 {
   "name": "tiptap-table-free",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A free table extension for Tiptap editor",
   "keywords": [
     "tiptap",
@@ -27,7 +27,6 @@
   },
   "files": [
     "bin",
-    "src",
     "README.md"
   ],
   "scripts": {
