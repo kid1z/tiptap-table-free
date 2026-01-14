@@ -9,8 +9,18 @@
 First install the Tiptap CLI (https://tiptap.dev/docs/ui-components/getting-started/cli) and dependencies (StarterKit, @tiptap/react, etc...) if you haven't already:
 
 ```bash
+npm install @tiptap/react @tiptap/pm @tiptap/starter-kit @tiptap/extension-table
 npx @tiptap/cli@latest init
 ```
+
+You may need to install the following dependencies:
+- `@tiptap/react`
+- `@tiptap/pm`
+- `@tiptap/starter-kit`
+- `@tiptap/extension-table`
+- `npx @tiptap/cli@latest add dropdown-menu`
+- `npx @tiptap/cli@latest add button`
+- `npx @tiptap/cli@latest add badge`
 
 The easiest way to add table support to your Tiptap editor is using our CLI:
 
@@ -23,6 +33,7 @@ This will generate all necessary components in your project:
 - `@/components/tiptap-node/` - Table styling (SCSS)
 - `@/components/tiptap-ui/table-button/` - Table button components
 - `@/components/tiptap-ui/table-dropdown-menu/` - Table dropdown menu
+
 
 
 ### Manual Installation
@@ -75,6 +86,8 @@ import { StarterKit } from '@tiptap/starter-kit'
 import { TableKit } from '@tiptap/extension-table'
 import { TableDropdownList } from '@/components/tiptap-ui/table-dropdown-menu'
 
+import '@/components/tiptap-node/table-node.scss'
+
 export default function MyEditor() {
   const editor = useEditor({
     immediatelyRender: false,
@@ -94,6 +107,10 @@ export default function MyEditor() {
     </EditorContext.Provider>
   )
 }
+```
+Don't forget to import the styles:
+```tsx
+import '@/components/tiptap-node/table-node.scss'
 ```
 
 ### Table Operations
