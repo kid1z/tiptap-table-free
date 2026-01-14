@@ -471,7 +471,7 @@ export * from './use-table'
 import {
   Button,
   type ButtonProps,
-} from '@/src/components/tiptap-ui-primitive/button'
+} from '@/components/tiptap-ui-primitive/button'
 import { useTiptapEditor } from '@/hooks/use-tiptap-editor'
 import type { TableList } from '../table-dropdown-menu/use-table-dropdown-menu'
 import { type UseTableConfig, useTable } from './use-table'
@@ -585,7 +585,7 @@ import {
   ToggleHeaderCellIcon,
   ToggleHeaderColumnIcon,
   ToggleHeaderRowIcon,
-} from '@/src/components/tiptap-icons/table-icon'
+} from '@/components/tiptap-icons/table-icon'
 import { useTiptapEditor } from '@/hooks/use-tiptap-editor'
 import {
   shouldShowButton,
@@ -723,21 +723,21 @@ export * from './table-dropdown-menu'
 `,
 
   'src/components/tiptap-ui/table-dropdown-menu/table-dropdown-menu.tsx': `import { useCallback, useState } from 'react'
-import { ChevronDownIcon } from '@/src/components/tiptap-icons/chevron-down-icon'
-import { TableIcon } from '@/src/components/tiptap-icons/table-icon'
-import { Badge } from '@/src/components/tiptap-ui-primitive/badge'
+import { ChevronDownIcon } from '@/components/tiptap-icons/chevron-down-icon'
+import { TableIcon } from '@/components/tiptap-icons/table-icon'
+import { Badge } from '@/components/tiptap-ui-primitive/badge'
 import {
   Button,
   ButtonGroup,
   type ButtonProps,
-} from '@/src/components/tiptap-ui-primitive/button'
-import { Card, CardBody } from '@/src/components/tiptap-ui-primitive/card'
+} from '@/components/tiptap-ui-primitive/button'
+import { Card, CardBody } from '@/components/tiptap-ui-primitive/card'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/src/components/tiptap-ui-primitive/dropdown-menu'
+} from '@/components/tiptap-ui-primitive/dropdown-menu'
 import { useTiptapEditor } from '@/hooks/use-tiptap-editor'
 import { parseShortcutKeys } from '@/lib/tiptap-utils'
 import { TableButton } from '../table-button'
@@ -861,7 +861,7 @@ import {
   MergeCellsIcon,
   SplitCellIcon,
   TableIcon,
-} from '@/src/components/tiptap-icons/table-icon'
+} from '@/components/tiptap-icons/table-icon'
 import { useTiptapEditor } from '@/hooks/use-tiptap-editor'
 import { isNodeInSchema } from '@/lib/tiptap-utils'
 

@@ -19,10 +19,10 @@ npx tiptap-table-free
 ```
 
 This will generate all necessary components in your project:
-- `components/tiptap-icons/` - Table-related icons
-- `components/tiptap-node/` - Table styling (SCSS)
-- `components/tiptap-ui/table-button/` - Table button components
-- `components/tiptap-ui/table-dropdown-menu/` - Table dropdown menu
+- `@/components/tiptap-icons/` - Table-related icons
+- `@/components/tiptap-node/` - Table styling (SCSS)
+- `@/components/tiptap-ui/table-button/` - Table button components
+- `@/components/tiptap-ui/table-dropdown-menu/` - Table dropdown menu
 
 
 ### Manual Installation
