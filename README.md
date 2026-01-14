@@ -15,10 +15,6 @@ npx @tiptap/cli@latest init
 ```
 
 You may need to install the following dependencies:
-- `@tiptap/react`
-- `@tiptap/pm`
-- `@tiptap/starter-kit`
-- `@tiptap/extension-table`
 - `npx @tiptap/cli@latest add dropdown-menu`
 - `npx @tiptap/cli@latest add button`
 - `npx @tiptap/cli@latest add badge`
